@@ -1,5 +1,11 @@
+import React from "react";
+import styled from "styled-components";
+
+const ServicePage = styled.div`
+  display: none;
+`;
 const Service = () => (
-  <div className="mainhome">
+  <ServicePage>
     <div className="mainhome__service">
       <div className="service__top">
         <p>SERVICE</p>
@@ -47,6 +53,6 @@ const Service = () => (
 
       <div className="service__bottom"></div>
     </div>
-  </div>
+  </ServicePage>
 );
 export default Service;

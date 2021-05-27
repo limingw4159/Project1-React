@@ -4,15 +4,19 @@ import HomePage from "./HomePage/HomePage";
 import Resume from "./Resume/Resume";
 import Service from "./Service/Service";
 import Blog from "./Contact/Blog";
+import styled from "styled-components";
 
+const MainPage = styled.div`
+  margin: 0 auto;
+`;
 const Pages = () => (
-  <div>
+  <MainPage>
     <HomePage />
     <Resume />
     <Service />
     <Blog />
     <Contact />
-  </div>
+  </MainPage>
 );
 
 export default Pages;

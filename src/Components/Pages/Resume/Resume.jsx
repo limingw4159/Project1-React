@@ -1,7 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
+const ResumePage = styled.div`
+  display: none;
+`;
 const Resume = () => (
-  <div className="mainhome">
+  <ResumePage>
     <div className="mainhome__resume">
       <div className="mainhome__resume__top">
         <p>RESUME</p>
@@ -165,7 +169,7 @@ const Resume = () => (
         </div>
       </div>
     </div>
-  </div>
+  </ResumePage>
 );
 
 export default Resume;
