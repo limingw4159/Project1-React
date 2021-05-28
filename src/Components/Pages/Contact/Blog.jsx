@@ -1,11 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
+const Blogstyle = styled.div`
+  display: none;
+`;
 const Blog = () => (
-  <div className="mainhome">
+  <Blogstyle>
     <div className="mainhome__contact__top">
       <p>Please Wait......</p>
     </div>
-  </div>
+  </Blogstyle>
 );
 
 export default Blog;

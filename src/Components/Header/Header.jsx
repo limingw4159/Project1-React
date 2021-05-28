@@ -29,14 +29,18 @@ const Right = styled.div`
   margin-top: 5px;
 `;
 
-const Header = () => (
-  <Nav>
-    <Left>
-      Joe <SpanHelight>Wong</SpanHelight>
-    </Left>
-    <Right>
-      <NavBarItem />
-    </Right>
-  </Nav>
-);
+const Header = (props) => {
+  const { argument } = props;
+
+  return (
+    <Nav>
+      <Left>
+        Joe <SpanHelight>Wong</SpanHelight>
+      </Left>
+      <Right>
+        <NavBarItem navItem={argument} />
+      </Right>
+    </Nav>
+  );
+};
 export default Header;

@@ -9,14 +9,19 @@ import styled from "styled-components";
 const MainPage = styled.div`
   margin: 0 auto;
 `;
-const Pages = () => (
-  <MainPage>
-    <HomePage />
-    <Resume />
-    <Service />
-    <Blog />
-    <Contact />
-  </MainPage>
-);
+
+const Pages = (props) => {
+  const { argument } = props;
+
+  return (
+    <MainPage>
+      {argument === "HOME" && <HomePage />}
+      {argument === "RESUME" && <Resume />}
+      {argument === "SERVICE" && <Service />}
+      {argument === "BLOG" && <Blog />}
+      {argument === "CONTACT" && <Contact />}
+    </MainPage>
+  );
+};
 
 export default Pages;

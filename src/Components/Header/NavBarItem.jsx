@@ -4,11 +4,12 @@ import styled from "styled-components";
 const Ul = styled.ul`
   padding: 20px;
 `;
+
 const Li = styled.li`
-  padding: 20px 20px 20px 20px;
+  padding: 20px;
   list-style: none;
   float: left;
-  margin-top: -40px;
+  margin-top: -30px;
   position: relative;
   &::after {
     content: "";
@@ -27,14 +28,41 @@ const Li = styled.li`
     transition: width 0.5s;
   }
 `;
-const NavBarItem = () => (
-  <Ul>
-    <Li className="current">Home</Li>
-    <Li>Resume</Li>
-    <Li>Service</Li>
-    <Li>Blog</Li>
-    <Li>Contact</Li>
-  </Ul>
-);
+
+const NavBarItem = (props) => {
+  const { navItem } = props;
+  const getNavbarItemActiveClassName = (key) => navItem === key && "current";
+  const getNavbarItemClassName = (key) =>
+    `${getNavbarItemActiveClassName(key)}`;
+  const navbarItems = [
+    {
+      key: "HOME",
+      value: "Home",
+    },
+    {
+      key: "RESUME",
+      value: "Resume",
+    },
+    {
+      key: "SERVICE",
+      value: "Service",
+    },
+    {
+      key: "BLOG",
+      value: "Home",
+    },
+    {
+      key: "CONTACT",
+      value: "Contact",
+    },
+  ];
+  return (
+    <Ul>
+      {navbarItems.map((Item) => (
+        <Li active={navItem === Item.key}>{Item.value}</Li>
+      ))}
+    </Ul>
+  );
+};
 
 export default NavBarItem;
