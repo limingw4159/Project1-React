@@ -28,19 +28,25 @@ const Right = styled.div`
   padding: 20px;
   margin-top: 5px;
 `;
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props.handlePageChange);
+  }
 
-const Header = (props) => {
-  const { argument } = props;
+  render() {
+    let { argument, handlePageChange } = this.props;
 
-  return (
-    <Nav>
-      <Left>
-        Joe <SpanHelight>Wong</SpanHelight>
-      </Left>
-      <Right>
-        <NavBarItem navItem={argument} />
-      </Right>
-    </Nav>
-  );
-};
+    return (
+      <Nav>
+        <Left>
+          Joe <SpanHelight>Wong</SpanHelight>
+        </Left>
+        <Right>
+          <NavBarItem handlePageChange={handlePageChange} navItem={argument} />
+        </Right>
+      </Nav>
+    );
+  }
+}
 export default Header;
