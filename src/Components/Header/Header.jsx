@@ -29,11 +29,6 @@ const Right = styled.div`
   margin-top: 5px;
 `;
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(this.props.handlePageChange);
-  }
-
   render() {
     let { argument, handlePageChange } = this.props;
 

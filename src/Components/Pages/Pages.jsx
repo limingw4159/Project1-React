@@ -1,9 +1,9 @@
 import React from "react";
-import Contact from "./Blog/Contact";
+import Blog from "./Blog/Blog";
 import HomePage from "./HomePage/HomePage";
 import Resume from "./Resume/Resume";
 import Service from "./Service/Service";
-import Blog from "./Contact/Blog";
+import Contact from "./Contact/Contact";
 import styled from "styled-components";
 
 const MainPage = styled.div`

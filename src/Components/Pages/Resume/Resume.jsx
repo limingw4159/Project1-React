@@ -5,6 +5,8 @@ import Resumemiddle from "./Resumemiddle";
 import Resumedown from "./Resumedown";
 const ResumePage = styled.div`
   display: flex;
+  position: relative;
+  top: 50px;
   flex-direction: column;
   flex-wrap: nowrap;
   max-width: 1000px;

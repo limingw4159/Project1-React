@@ -32,10 +32,6 @@ const Li = styled.li`
 `;
 
 class NavBarItem extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
   render() {
     let { navItem, handlePageChange } = this.props;
     const navbarItems = [
@@ -53,7 +49,7 @@ class NavBarItem extends React.Component {
       },
       {
         key: "BLOG",
-        value: "Home",
+        value: "Blog",
       },
       {
         key: "CONTACT",
