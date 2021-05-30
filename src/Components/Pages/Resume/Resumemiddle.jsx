@@ -9,6 +9,9 @@ const Middle = styled.div`
 `;
 const Middlediv = styled.div`
   margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 const Details = styled.div`
   position: relative;
