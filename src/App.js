@@ -3,19 +3,14 @@ import Header from "./Components/Header/Header";
 import Pages from "./Components/Pages/Pages";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: "HOME",
-    };
-    this.handlePageChange = this.handlePageChange.bind(this);
-  }
-
-  handlePageChange(newPage) {
+  state = {
+    page: "HOME",
+  };
+  handlePageChange = (newPage) => {
     this.setState({
       page: newPage,
     });
-  }
+  };
   render() {
     let { page } = this.state;
 
